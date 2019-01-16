@@ -12,10 +12,12 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class HOD_Info_Window {
 
-	private JFrame frame;
+	public JFrame frame;
 
 	/**
 	 * Launch the application.
@@ -25,7 +27,7 @@ public class HOD_Info_Window {
 			public void run() {
 				try {
 					HOD_Info_Window window = new HOD_Info_Window();
-					window.frame.setVisible(true);
+					window.frame.setVisible(false);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -101,6 +103,15 @@ public class HOD_Info_Window {
 		frame.getContentPane().add(HOD_Sign_panel);
 		
 		JButton HOD_info_Edit_btn = new JButton("Edit Info");
+		HOD_info_Edit_btn.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+				
+				HOD_Info_Edit_Window window = new HOD_Info_Edit_Window();
+				window.frame.setVisible(true);
+				
+			}
+		});
 		HOD_info_Edit_btn.setBackground(Color.GRAY);
 		HOD_info_Edit_btn.setForeground(Color.WHITE);
 		HOD_info_Edit_btn.setFont(new Font("Hemi Head Rg", Font.BOLD, 17));

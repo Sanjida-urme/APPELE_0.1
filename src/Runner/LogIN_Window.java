@@ -8,6 +8,14 @@ import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.border.Border;
 import javax.swing.border.LineBorder;
+
+import Admin_User_Dashbord.Admin_Info_Edit_Window;
+import Admin_User_Dashbord.Admin_User_Dashboard_window;
+import Faculty_User_Dashboard.Faculty_Info_Window;
+import HOD_User_Dashboard.HOD_Info_Window;
+import Student_User_Dashboard.Student_Dashboard_window;
+import Student_User_Dashboard.Student_Info_Window;
+
 import javax.swing.JPasswordField;
 import java.awt.Color;
 import java.awt.SystemColor;
@@ -21,6 +29,8 @@ import java.awt.Graphics;
 import java.awt.Image;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 
 public class LogIN_Window {
@@ -62,7 +72,7 @@ public class LogIN_Window {
 		
 		
 		frmAppele = new JFrame();
-		frmAppele.setIconImage(Toolkit.getDefaultToolkit().getImage("H:\\JAVA_PROJECT_APPELE\\2697649.png"));
+		frmAppele.setIconImage(Toolkit.getDefaultToolkit().getImage("H:\\JAVA_PROJECT_APPELE\\Appele-logo.png"));
 		frmAppele.setTitle("Appele");
 		frmAppele.getContentPane().setBackground(new Color(102, 51, 255));
 		frmAppele.setBackground(SystemColor.inactiveCaption);
@@ -91,6 +101,24 @@ public class LogIN_Window {
 		frmAppele.getContentPane().add(passwordField);
 		
 		JButton Log_IN_Button = new JButton("Log IN");
+		Log_IN_Button.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+				
+				Admin_User_Dashboard_window window1 = new Admin_User_Dashboard_window();
+				window1.frame.setVisible(true);
+				
+				HOD_Info_Window window2 = new HOD_Info_Window();
+				window2.frame.setVisible(true);
+				
+				Faculty_Info_Window window3 = new Faculty_Info_Window();
+				window3.frmStudentProfile.setVisible(true);
+				
+				Student_Dashboard_window window4 = new Student_Dashboard_window();
+				window4.frmStudentDashboard.setVisible(true);
+
+			}
+		});
 		Log_IN_Button.setToolTipText("Click here for Log In.");
 		Log_IN_Button.setForeground(SystemColor.text);
 		Log_IN_Button.setBackground(SystemColor.textHighlight);

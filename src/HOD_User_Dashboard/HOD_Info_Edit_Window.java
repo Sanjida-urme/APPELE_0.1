@@ -20,7 +20,7 @@ import javax.swing.JTextField;
 
 public class HOD_Info_Edit_Window {
 
-	private JFrame frame;
+	JFrame frame;
 	private JPasswordField HOD_passwordField;
 	private JTextField textField;
 

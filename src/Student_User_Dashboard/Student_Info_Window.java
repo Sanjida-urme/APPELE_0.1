@@ -16,7 +16,7 @@ import java.awt.Toolkit;
 
 public class Student_Info_Window {
 
-	JFrame frmStudentProfile;
+	public JFrame frmStudentProfile;
 	private JTextField Student_ID_txtfield;
 	private JTextField Student_Department_txtfield;
 

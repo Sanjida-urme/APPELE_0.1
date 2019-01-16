@@ -23,7 +23,7 @@ import java.awt.Toolkit;
 
 public class Admin_User_Dashboard_window {
 
-	private JFrame frame;
+	public JFrame frame;
 
 	/**
 	 * Launch the application.
@@ -33,7 +33,7 @@ public class Admin_User_Dashboard_window {
 			public void run() {
 				try {
 					Admin_User_Dashboard_window window = new Admin_User_Dashboard_window();
-					window.frame.setVisible(true);
+					window.frame.setVisible(false);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}

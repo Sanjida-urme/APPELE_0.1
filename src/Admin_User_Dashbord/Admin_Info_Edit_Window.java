@@ -19,7 +19,7 @@ import javax.swing.JRadioButtonMenuItem;
 
 public class Admin_Info_Edit_Window {
 
-	private JFrame frame;
+	public JFrame frame;
 	private JTextField Admin_Id_txtfild;
 	private JPasswordField Admin_passwordField;
 	/**
@@ -30,7 +30,7 @@ public class Admin_Info_Edit_Window {
 			public void run() {
 				try {
 					Admin_Info_Edit_Window window = new Admin_Info_Edit_Window();
-					window.frame.setVisible(true);
+					window.frame.setVisible(false);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}

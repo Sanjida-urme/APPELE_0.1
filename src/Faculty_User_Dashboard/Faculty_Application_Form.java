@@ -16,7 +16,7 @@ import javax.swing.JTextField;
 
 public class Faculty_Application_Form {
 
-	private JFrame frame;
+	JFrame frame;
 	private JTextField Application_ID_txtfield;
 
 	/**

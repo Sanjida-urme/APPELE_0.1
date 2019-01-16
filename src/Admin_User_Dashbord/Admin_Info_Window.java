@@ -44,7 +44,7 @@ public class Admin_Info_Window {
 			public void run() {
 				try {
 					Admin_Info_Window window = new Admin_Info_Window();
-					window.frmEditInfo.setVisible(true);
+					window.frmEditInfo.setVisible(false);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}

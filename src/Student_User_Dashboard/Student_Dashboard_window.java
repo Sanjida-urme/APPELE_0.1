@@ -17,14 +17,14 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 
-
+import Runner.LogIN_Window;
 
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 public class Student_Dashboard_window {
 
-	private JFrame frmStudentDashboard;
+	public JFrame frmStudentDashboard;
 
 	/**
 	 * Launch the application.
@@ -33,8 +33,8 @@ public class Student_Dashboard_window {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Student_Dashboard_window window = new Student_Dashboard_window();
-					window.frmStudentDashboard.setVisible(true);
+					Student_Dashboard_window window4 = new Student_Dashboard_window();
+					window4.frmStudentDashboard.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -101,6 +101,14 @@ public class Student_Dashboard_window {
 		Notice_Menu_btn.add(CreateNotice_Menu_btn);
 		
 		JMenu Application_Menu_btn = new JMenu("Application");
+		Application_Menu_btn.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				Student_Application_Form window = new Student_Application_Form();
+				window.frame.setVisible(true);
+				
+			}
+		});
 		Application_Menu_btn.setFont(new Font("Hemi Head Rg", Application_Menu_btn.getFont().getStyle(), 16));
 		menuBar.add(Application_Menu_btn);
 		
@@ -112,7 +120,8 @@ public class Student_Dashboard_window {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				
-			
+				LogIN_Window window = new LogIN_Window();
+				window.frmAppele.setVisible(true);
 			}
 		});
 		LogOut_btn.setForeground(new Color(51, 153, 255));

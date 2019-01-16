@@ -18,7 +18,7 @@ import javax.swing.JButton;
 
 public class Student_Application_Form {
 
-	private JFrame frame;
+	JFrame frame;
 	private JTextField Application_ID_txt_Field;
 	private JTextField Student_ID_txt_Field;
 	private JTextField Student_Application_Subject_txtField;
